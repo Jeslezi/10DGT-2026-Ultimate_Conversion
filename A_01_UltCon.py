@@ -37,24 +37,6 @@ def conversion_checker(question):
 conversion = conversion_checker("\nWhat method of conversion ")'''
 
 #Code to check whether the conversion is valid(V2)
-'''def conversion_checker(question):
-    
-    #Error statement
-    error = "Please enter a valid conversion\n"
-    while True:
-        
-        try:
-            #Ask the user for the width
-            response = str(input(question))
-            #Checks all the different length conversions
-            #Checks if the the conversion is valid
-            if response == (f"first_conversion to second_conversion"):
-                return response
-            else:
-                #If it isn't print the error code   
-                print(error)
-        except ValueError:
-            print(error)'''
 
 def type_checker(question):
     
@@ -82,7 +64,7 @@ def type_checker(question):
 def distance_checker(question):
     
     #Error statement
-    error = "Please enter a valid type of conversion\n"
+    error = "Please enter a valid length unit\n"
     while True:
         
         try:
@@ -104,16 +86,33 @@ def distance_checker(question):
         except ValueError:
             print(error)
 
+def num_checker(question):
+    
+    #Error statement
+    error = "Please enter a valid number or a number that is more than zero\n"
+    while True:
+        
+        try:
+            #Ask the user for the width
+            response = float(input(question))
+            
+            #Checks if the width is more than zero
+            if response > 0:
+                return response
+            else:
+                #If it isn't print the error code   
+                print(error)
+        except ValueError:
+            print(error)
 #Main routine
 type_of_conversion = type_checker("Type of conversion: ") 
 
-if type_of_conversion == "distance":
-    first_conversion = distance_checker("\nFirst unit  ")
-    second_conversion = distance_checker("\nSecond unit  ")
-    conversion = (f"{first_conversion} to {second_conversion}")
 
-if conversion == "cm to m":
-    print("hello")
+    unit = num_checker("\nUnit ")
+    output = unit * 10
+    print(f"{unit} cm to m is equal to {output} m")
+
+
 
 
 

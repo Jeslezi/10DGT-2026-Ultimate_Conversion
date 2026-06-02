@@ -105,13 +105,13 @@ def time_checker(question):
             #Checks all the different length conversions
             
             #Checks if the the conversion is valid
-            if response == "s":
+            if response == "seconds":
                 return response
-            elif response == "m":
+            elif response == "minutes":
                 return response
-            elif response == "h":
+            elif response == "hours":
                 return response
-            elif response == "d":
+            elif response == "days":
                 return response
             else:
                 #If it isn't print the error code   

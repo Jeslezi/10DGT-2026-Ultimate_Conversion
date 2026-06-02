@@ -37,6 +37,24 @@ def conversion_checker(question):
 conversion = conversion_checker("\nWhat method of conversion ")'''
 
 #Code to check whether the conversion is valid(V2)
+def num_checker(question):
+    
+    #Error statement
+    error = "Please enter a valid number or a number that is more than zero\n"
+    while True:
+        
+        try:
+            #Ask the user for the width
+            response = float(input(question))
+            
+            #Checks if the width is more than zero
+            if response > 0:
+                return response
+            else:
+                #If it isn't print the error code   
+                print(error)
+        except ValueError:
+            print(error)
 
 def type_checker(question):
     
@@ -64,7 +82,7 @@ def type_checker(question):
 def distance_checker(question):
     
     #Error statement
-    error = "Please enter a valid length unit\n"
+    error = "Please enter a valid distance unit\n"
     while True:
         
         try:
@@ -85,25 +103,55 @@ def distance_checker(question):
                 print(error)
         except ValueError:
             print(error)
-
-def num_checker(question):
+            
+def mass_checker(question):
     
     #Error statement
-    error = "Please enter a valid number or a number that is more than zero\n"
+    error = "Please enter a valid mass unit\n"
     while True:
         
         try:
             #Ask the user for the width
-            response = float(input(question))
-            
-            #Checks if the width is more than zero
-            if response > 0:
+            response = str(input(question))
+            #Checks all the different length conversions
+            #Checks if the the conversion is valid
+            if response == "g":
+                return response
+            elif response == "kg":
+                return response
+            elif response == "t":
                 return response
             else:
                 #If it isn't print the error code   
                 print(error)
         except ValueError:
             print(error)
+
+def time_checker(question):
+    
+    #Error statement
+    error = "Please enter a valid mass unit\n"
+    while True:
+        
+        try:
+            #Ask the user for the width
+            response = str(input(question))
+            #Checks all the different length conversions
+            #Checks if the the conversion is valid
+            if response == "s":
+                return response
+            elif response == "m":
+                return response
+            elif response == "h":
+                return response
+            else:
+                #If it isn't print the error code   
+                print(error)
+        except ValueError:
+            print(error)
+
+
+
 #Main routine
 
 

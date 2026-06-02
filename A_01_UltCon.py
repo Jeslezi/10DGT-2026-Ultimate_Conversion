@@ -105,12 +105,7 @@ def num_checker(question):
         except ValueError:
             print(error)
 #Main routine
-type_of_conversion = type_checker("Type of conversion: ") 
 
-
-    unit = num_checker("\nUnit ")
-    output = unit * 10
-    print(f"{unit} cm to m is equal to {output} m")
 
 
 

@@ -120,9 +120,9 @@ def time_checker(question):
             print(error)
 
 
-#Main routine
 keep_going = ""
 while keep_going == "":
+#Main routine
 #Ask for what type of conversion
     print("Welcome to the Ultimate Conversion Calculator")
     instructions = input("Press enter for instructions or any other key to skip:")
@@ -308,7 +308,7 @@ while keep_going == "":
     keep_going = input("\nPress enter to keep going or any key to quit. ")
     print()
 
-print("Thank you for using the fencing cost calculator")
+print("Thank you for using the ultimate conversion calculator")
 
 
 

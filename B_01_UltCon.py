@@ -165,7 +165,7 @@ while keep_going == "":
             print("minutes")
             print("hours")
             print("days") 
-        first_conversion = time_checker("\nFirst Conversion:")
+        first_conversion = time_checker("First Conversion:")
         second_conversion = time_checker("Second Conversion:")
         conversion = (f"{first_conversion} to {second_conversion}")
 
@@ -288,6 +288,21 @@ while keep_going == "":
         unit = num_checker(f"\nHow many {first_conversion}:")
         output = unit / 60
         print(f"{unit} minutes to hours is equal to {output} hours")
+
+    if conversion == "hours to seconds":
+        unit = num_checker(f"\nHow many {first_conversion}:")
+        output = unit * 3600
+        print(f"{unit} hours to seconds is equal to {output} seconds")
+
+    if conversion == "hours to minutes":
+        unit = num_checker(f"\nHow many {first_conversion}:")
+        output = unit * 60
+        print(f"{unit} days to minutes is equal to {output} minutes")
+
+    if conversion == "hours to days":
+        unit = num_checker(f"\nHow many {first_conversion}:")
+        output = unit / 24
+        print(f"{unit} days to hours is equal to {output} hours")
 
     if conversion == "days to seconds":
         unit = num_checker(f"\nHow many {first_conversion}:")
